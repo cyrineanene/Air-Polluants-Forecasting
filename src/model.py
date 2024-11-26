@@ -58,5 +58,4 @@ def load_and_predict(model_file, periods=365):
     forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].to_csv(predictions_file, index=False)
     print(f"Predictions saved to: {predictions_file}")
 
-    plot_predictions(forecast)
-    return predictions_file
+    return forecast
