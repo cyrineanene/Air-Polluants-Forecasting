@@ -53,7 +53,7 @@ def load_and_predict(model_file, periods=365):
     
     future = model.make_future_dataframe(periods=periods)
     forecast = model.predict(future)
-    
+    forecast['yhat'] = forecast['yhat'].clip(lower=0)
     predictions_file = model_file.replace("_prophet_model.pkl", "_forecast.csv")
     forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].to_csv(predictions_file, index=False)
     print(f"Predictions saved to: {predictions_file}")
