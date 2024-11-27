@@ -51,14 +51,13 @@ def plot_all_forecasts(all_forecasts, country):
     plt.show()
 
 def plot_global_aqi(global_aqi_df, title="Global AQI Forecast"):
-    # Convert index (months) back to a proper format for plotting
+
     global_aqi_df = global_aqi_df.reset_index()
     global_aqi_df['month'] = global_aqi_df['month'].dt.strftime('%b %Y')
     
     plt.figure(figsize=(10, 6))
     plt.plot(global_aqi_df['month'], global_aqi_df['Global_AQI'], marker='o', label='Global AQI', color='green')
 
-    # Formatting the plot
     plt.xticks(rotation=45, fontsize=10)
     plt.yticks(fontsize=10)
     plt.xlabel("Month", fontsize=12)
