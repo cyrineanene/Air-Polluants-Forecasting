@@ -1,13 +1,11 @@
 import os
 import pandas as pd
-import json
-import matplotlib.pyplot as plt
 from src.model import train_and_save_model, load_and_predict, plot_predictions
 from utils import calculate_aqi, plot_all_forecasts, plot_global_aqi
 
 data = pd.read_csv("src\data\cleaned_dataset.csv")
 
-country = 'andorra'
+country = input('Enter your desired country: ')
 pollutants = ['no2', 'o3', 'so2', 'pm2_5', 'pm10']
 
 pollutant_aqi_values = {}
