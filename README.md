@@ -93,4 +93,4 @@ For example, let's predict the values of pollutants and AQI for `Andorra`. Here 
 - Developement and deployment of an application for real-time forecasting.
 - Incorporation of deep learning models for enhanced accuracy.
 ---
-This project provides a comprehensive AQI forecasting solution, offering insights into air quality trends.
+This project provides a comprehensive AQI forecasting solution, offering insights into air quality trends. It is also part of another project called `AWS-Real-time-Air-Quality-Visualization-and-prediction-and-LLM-reporting`. You can check out the related project [here](https://github.com/cyrineanene/AWS-Real-time-Air-Quality-Visualization-and-prediction-and-LLM-reporting).
